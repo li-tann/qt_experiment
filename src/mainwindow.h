@@ -1,4 +1,4 @@
-﻿#ifndef GUI_QT_MAINWINDOW_H
+#ifndef GUI_QT_MAINWINDOW_H
 #define GUI_QT_MAINWINDOW_H
 
 #include <qmainwindow.h>

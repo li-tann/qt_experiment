@@ -1,4 +1,4 @@
-﻿#include "messagepopup.h"
+#include "messagepopup.h"
 #include <QGuiApplication>
 #include <QScreen>
 #include <qdebug.h>
@@ -14,7 +14,7 @@ MessagePopup::MessagePopup(QWidget *parent) : QDialog(parent) {
     // 创建布局
     QVBoxLayout *layout = new QVBoxLayout(this);
     layout->setMargin(0);
-    QLabel *messageLabel = new QLabel("This is a Msg", this);
+    QLabel *messageLabel = new QLabel("This is a Msg 消息", this);
     // QPushButton *closeButton = new QPushButton("Close", this);
 
     // 添加到布局
@@ -34,7 +34,7 @@ MessagePopup::MessagePopup(QWidget *parent) : QDialog(parent) {
     pos += pos_margin;
 
     // 创建动画
-    QPropertyAnimation *animation = new QPropertyAnimation(this, "pos", this);
+    QPropertyAnimation *animation = new QPropertyAnimation(this, "pos", this);  /// 设置移动的动画效果
     animation->setDuration(300); // 动画持续时间
     animation->setStartValue(QPoint(pos.x() + width, pos.y()));
     animation->setEndValue(pos);
@@ -60,7 +60,7 @@ void MessagePopup::close() {
 void MessagePopup::closeWidget()
 {
    //界面动画，改变透明度的方式消失1 - 0渐变
-    QPropertyAnimation *animation= new QPropertyAnimation(this, "windowOpacity");
+    QPropertyAnimation *animation= new QPropertyAnimation(this, "windowOpacity");   ///设置窗口透明度的动画考过
     animation->setDuration(700);
     animation->setStartValue(1);
     animation->setEndValue(0);

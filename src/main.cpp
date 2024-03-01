@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <QtCore/qstring.h>
 #include <qapplication.h>
 #include <qsplashscreen.h>
